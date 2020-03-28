@@ -62,6 +62,7 @@ public class MyBinarySearchTree {
             while(comp.getLeft() != null){
                 comp = comp.getLeft();
                 System.out.println(comp.getKey());
+                System.out.println("no output");
             }
         }
     }

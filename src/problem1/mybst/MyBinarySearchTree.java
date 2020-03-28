@@ -17,6 +17,7 @@ public class MyBinarySearchTree {
         comp = head;
     }
     public void insertElement(int val){
+        comp = head;
         TreeNode temp = new TreeNode(val);
         if(head == null){
             temp.setLeft(null);
@@ -24,49 +25,54 @@ public class MyBinarySearchTree {
             temp.setKey(val);
             head = temp;
             comp = temp;
+            System.out.println("root ="+head.getKey());
 
         }
         while(comp != temp) {
-            if (comp.getKey() > val) {
+            if (comp.getKey() < val) {
                 if (comp.getRight() == null) {
                     comp.setRight(temp);
                     temp.setKey(val);
                     temp.setRight(null);
                     temp.setLeft(null);
                     comp = temp;
-                    break;
                 }
                 else {
-                    comp.setRight(comp);
+                    comp = comp.getRight();
                 }
-            } else if (comp.getKey() < val) {
+            } else if (comp.getKey() > val) {
                 if (comp.getLeft() == null) {
                     comp.setLeft(temp);
                     temp.setKey(val);
                     temp.setLeft(null);
                     temp.setRight(null);
                     comp = temp;
-                    break;
                 } else {
-                    comp.setLeft(comp);
+                    comp = comp.getLeft();
                 }
             }
         }
-        comp = head;
+    }
+    static int max_level = 0;
+    public void leftView(TreeNode node, int level){
+        // Base Case
+        if (node == null)
+            return;
+
+        if (max_level < level) {
+            System.out.print(" " + node.getKey());
+            max_level = level;
+        }
+
+        // Recur for left and right subtrees
+        leftView(node.getLeft(), level + 1);
+        leftView(node.getRight(), level + 1);
     }
 
 
+
     public void printLeft(){
-        if(comp == null){
-            System.out.println("Tree is empty");
-        }
-        else{
-            while(comp.getLeft() != null){
-                comp = comp.getLeft();
-                System.out.println(comp.getKey());
-                System.out.println("no output");
-            }
-        }
+        leftView(head, 1);
     }
     public TreeNode getRoot(){
         TreeNode root = head;

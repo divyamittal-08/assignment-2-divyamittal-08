@@ -18,4 +18,11 @@ public class MyCircularQueue {
         rear=null;
         size=0;
     }
+    public boolean isEmpty(){
+        boolean response=false;
+        if(size==0){
+            response=true;
+        }
+        return response;
+    }
 }

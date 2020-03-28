@@ -21,5 +21,14 @@ public class MyMain {
             preorder(root.getRight());
         }
     }
+    public static void postorder(TreeNode root){
+        if(root == null)    return;
+        else{
+            postorder(root.getLeft());
+            postorder(root.getRight());
+            System.out.print(root.getKey()+"\t");
+        }
+    }
+
 
 }

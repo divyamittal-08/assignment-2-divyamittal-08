@@ -7,7 +7,6 @@
 package problem1.main;
 // executable class
 
-import com.sun.source.tree.Tree;
 import problem1.mybst.MyBinarySearchTree;
 import problem1.node.TreeNode;
 

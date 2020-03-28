@@ -60,7 +60,7 @@ public class MyBinarySearchTree {
             return;
 
         if (max_level < level) {
-            System.out.print(" " + node.getKey());
+            System.out.println(" " + node.getKey());
             max_level = level;
         }
 

@@ -13,5 +13,14 @@ import problem1.mybst.MyBinarySearchTree;
 public class MyMain {
     public static void main(String[] args) {
         MyBinarySearchTree obj = new MyBinarySearchTree();
+        obj.insertElement(10);
+        obj.insertElement(3);
+        obj.insertElement(30);
+        obj.insertElement(37);
+        obj.insertElement(13);
+        obj.insertElement(1);
+        obj.insertElement(7);
+
+
     }
 }

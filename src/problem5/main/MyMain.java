@@ -49,7 +49,7 @@ public class MyMain {
                     break;
 
             }
-            System.out.print("Press 1 for enqueue, press 2 for dequeue:- ");
+            System.out.print("Press 1 for enqueue, press 2 for dequeue, press 0 for exit:- ");
             counter=sc.nextInt();
             sc.nextLine();
         }

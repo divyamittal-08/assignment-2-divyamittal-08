@@ -17,7 +17,7 @@ public class MyMain {
     public static void main(String[] args) {
         MyCircularQueue obj = new MyCircularQueue();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Press 1 for enqueue, press 2 for dequeue:- ");
+        System.out.print("Press 1 for enqueue, press 2 for dequeue and press 0 for exit :- ");
         int counter = sc.nextInt();
         sc.nextLine();
         while(counter!=0) {
@@ -49,9 +49,7 @@ public class MyMain {
                     break;
 
             }
-            System.out.print("Press 1 for enqueue, press 2 for dequeue, press 0 for exit:- ");
-            counter=sc.nextInt();
-            sc.nextLine();
+
         }
     }
 }

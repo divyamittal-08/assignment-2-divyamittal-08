@@ -82,4 +82,25 @@ public class MyPriorityQueue {
             }
         }
     }
+    public void traversing(){
+        if(front!=null) {
+            Node temp = front;
+            int temp1=size;
+            while (temp1!=0) {
+                System.out.print(temp.getData() + " ");
+                temp = temp.getNext();
+                temp1--;
+            }
+
+            System.out.println();
+        }
+
+        else
+        {
+            System.out.println("sorry! Queue is empty.");
+        }
+
+    }
+
 }
+

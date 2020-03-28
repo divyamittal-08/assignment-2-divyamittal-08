@@ -7,6 +7,7 @@
 package problem4.main;
 
 import problem1.mybst.MyBinarySearchTree;
+import problem4.myqueue.MyQueue;
 
 // executable class
 // use problem1.mybst.MyBinarySearchTree class for creating binary tree
@@ -20,7 +21,9 @@ public class MyMain {
         obj.insertElement(13);
         obj.insertElement(1);
         obj.insertElement(7);
-
+        MyQueue mq = new MyQueue();
+        mq.preSuccessor(obj.getRoot());
+        mq.getPreSucc();
 
     }
 }

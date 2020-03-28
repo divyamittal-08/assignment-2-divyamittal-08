@@ -66,5 +66,9 @@ public class MyBinarySearchTree {
             }
         }
     }
+    public TreeNode getRoot(){
+        TreeNode root = head;
+        return root;
+    }
 
 }

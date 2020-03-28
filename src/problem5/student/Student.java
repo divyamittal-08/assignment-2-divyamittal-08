@@ -17,4 +17,34 @@ public class Student {
         this.backlog = backlog;
         count=0;
     }
+    public int getRollno() {
+        return rollno;
+    }
+
+    public void setRollno(int rollno) {
+        this.rollno = rollno;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getBacklog() {
+        return backlog;
+    }
+    public void setBacklog(int backlog) {
+        this.backlog = backlog;
+    }
+
+    public int getCount(){
+        return count;
+    }
+
+    public void getINX(){
+        count++;
+    }
 }

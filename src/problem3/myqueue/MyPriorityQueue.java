@@ -6,6 +6,8 @@
  */
 package problem3.myqueue;
 
+import problem3.node.Node;
+
 public class MyPriorityQueue {
     private Node front;
     private Node rear;
@@ -15,5 +17,13 @@ public class MyPriorityQueue {
         front = null;
         rear = null;
         size = 0;
+    }
+    public boolean isEmpty()
+    {
+        boolean response = false;
+        if(front != null || size != 0){
+            response = true;
+        }
+        return response;
     }
 }

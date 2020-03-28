@@ -17,6 +17,7 @@ public class MyMain {
         mybst.head = new TreeNode(1);
         mybst.head.setLeft(new TreeNode(2));
         mybst.head.setRight(new TreeNode(3));
+
         mybst.printLeft();
         System.out.println("The leaf count of binary tree is : " + mybst.getLeafCount());
 

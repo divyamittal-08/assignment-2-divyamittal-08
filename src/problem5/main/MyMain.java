@@ -24,11 +24,11 @@ public class MyMain {
             switch (counter) {
 
                 case 1:
-                    System.out.print("Enter Name:- ");
+                    System.out.println("Enter Name:- ");
                     String name = sc.nextLine();
-                    System.out.print("Enter roll number:- ");
+                    System.out.println("Enter roll number:- ");
                     int roll = sc.nextInt();
-                    System.out.print("Enter Backlog:- ");
+                    System.out.println("Enter Backlog:- ");
                     int back = sc.nextInt();
                     Student stu = new Student(roll, name, back);
                     obj.enqueue(stu);
@@ -48,7 +48,11 @@ public class MyMain {
                     }
                     break;
 
+
             }
+            System.out.print("Press 1 for enqueue, press 2 for dequeue and press 0 for exit :- ");
+            counter = sc.nextInt();
+            sc.nextLine();
 
         }
     }

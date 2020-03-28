@@ -28,6 +28,22 @@ public class MyMain {
             postorder(root.getRight());
             System.out.print(root.getKey()+"\t");
         }
+    }public static void prepost(){
+        MyBinarySearchTree obj = new MyBinarySearchTree();
+        postorder(obj.getRoot());
+        System.out.println();
+        preorder(obj.getRoot());
+    }
+    public static void main(String[] args) {
+        MyBinarySearchTree obj = new MyBinarySearchTree();
+        obj.insert(85);
+        obj.insert(63);
+        obj.insert(54);
+        obj.insert(2);
+        obj.insert(23);
+        obj.insert(95);
+        obj.insert(36);
+        prepost();
     }
 
 

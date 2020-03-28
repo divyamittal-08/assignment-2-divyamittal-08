@@ -12,9 +12,9 @@ import problem1.node.TreeNode;
 public class MyBinarySearchTree {
     TreeNode head;
     TreeNode comp;
-    MyBinarySearchTree(){
+    public MyBinarySearchTree(){
         head = null;
-        comp = head;
+        comp = null;
     }
     public void insertElement(int val){
         TreeNode temp = new TreeNode(val);
@@ -65,7 +65,5 @@ public class MyBinarySearchTree {
             }
         }
     }
-
-
 
 }

@@ -43,6 +43,14 @@ public class MyQueue {
             preSuccessor(root.getLeft());
             preSuccessor(root.getRight());
         }
+
+    }
+    public void getPreSucc(){
+        Node temp = front.next;
+        while(temp!=null){
+            System.out.print(temp.data + "\t");
+            temp = temp.next;
+        }
     }
 }
 

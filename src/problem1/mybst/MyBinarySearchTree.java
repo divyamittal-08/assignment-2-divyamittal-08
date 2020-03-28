@@ -14,7 +14,7 @@ public class MyBinarySearchTree {
     TreeNode comp;
     MyBinarySearchTree(){
         head = null;
-        comp = null;
+        comp = head;
     }
     public void insertElement(int val){
         TreeNode temp = new TreeNode(val);
@@ -53,6 +53,17 @@ public class MyBinarySearchTree {
             }
         }
         comp = head;
+    }
+    public void printLeft(){
+        if(comp == null){
+            System.out.println("Tree is empty");
+        }
+        else{
+            while(comp.getLeft() != null){
+                comp = comp.getLeft();
+                System.out.println(comp.getKey());
+            }
+        }
     }
 
 

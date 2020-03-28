@@ -44,4 +44,42 @@ public class MyPriorityQueue {
         }
         return response;
     }
+    public void  enqueue(int data){
+        Node node=new Node(data);
+        if(front==null){
+            front=node;
+            rear=node;
+            size++;
+            System.out.println("Value Entered successfully!");
+        }
+        else if(data<=front.getData()){
+            node.setNext(front);
+            front=node;
+            size++;
+            System.out.println("Value Entered successfully!");
+        }
+        else if(data>=rear.getData()){
+            node.setNext(front);
+            rear.setNext(node);
+            rear=node;
+            System.out.println("Value Entered successfully!");
+            size++;
+        }
+        else {
+            Node temp = front;
+            Node previous=temp;
+            while(temp.getNext().getNext()!=null){
+
+                if(data<=temp.getData()){
+                    previous.setNext(node);
+                    node.setNext(temp);
+                    size++;
+                    System.out.println("Value Entered successfully!");
+                    break;
+                }
+                previous=temp;
+                temp=temp.getNext();
+            }
+        }
+    }
 }
